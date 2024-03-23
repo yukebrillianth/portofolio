@@ -1,4 +1,5 @@
 import "styles/tailwind.css"
+import "fonts/stylesheet.css"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
