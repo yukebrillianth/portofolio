@@ -7,19 +7,21 @@ export async function getPortfolios() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      query: `query getPortfolios {
-                portfolios(where: { public: true }, orderBy: date_DESC) {
-                    id
-                    title
-                    images {
-                    id
-                    url(transformation: {document: {output: {format: webp}}})
-                    width
-                    height
-                    fileName
-                    }
-                }
-        }`,
+      query: `
+        query getPortfolios {
+          portfolios(where: { public: true }, orderBy: date_DESC) {
+            id
+            title
+            images {
+              id
+              url(transformation: { document: { output: { format: webp } } })
+              width
+              height
+              fileName
+            }
+          }
+        }
+      `,
       operationName: 'getPortfolios',
     }),
     cache: 'force-cache',
