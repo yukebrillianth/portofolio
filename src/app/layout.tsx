@@ -4,6 +4,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 
 import Providers from '@/app/providers';
+import { cn } from '@/lib/utils';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -35,7 +36,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body
+        className={cn(
+          'overflow-x-hidden scroll-smooth bg-white font-sans antialiased dark:bg-black',
+          inter.className,
+        )}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>
