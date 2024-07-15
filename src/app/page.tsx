@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 
-import { LampDemo } from '@/components/ui/lamp';
+import Navbar from '@/components/layout/Navbar';
+import Hero from '@/components/sections/hero';
+import { Spotlight } from '@/components/ui/spotlight';
 // import Image from 'next/image';
 import { breadCrumbJsonLd, pageJsonLd } from '@/lib/seo';
 import { PageService } from '@/services';
@@ -48,22 +50,16 @@ export default async function Home() {
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadCrumb) }}
         />
-        <main>
-          {/* <h1>Posts</h1>
-          {data.portfolios.map((portfolio) => (
-            <div key={portfolio.id}>
-              <p>{portfolio.title}</p>
-              <Image
-                alt={portfolio.title}
-                src={portfolio.images[0].url}
-                width={400}
-                height={200}
-                className='rounded-lg'
-              />
-            </div>
-          ))} */}
-          <LampDemo />
-        </main>
+        <Navbar />
+        <div className='relative overflow-hidden px-2 pb-40 pt-28 md:px-4 md:pt-40 lg:px-8'>
+          <div className='pointer-events-none absolute inset-0 select-none bg-grid-black/[0.04] [mask-image:linear-gradient(to_bottom_right,white_10%,transparent_35%)] dark:bg-grid-white/[0.06]'></div>
+          <Spotlight
+            className='-top-60 left-0 md:-top-10 md:left-60'
+            fill='white'
+            fillOpacity={0.15}
+          />
+          <Hero />
+        </div>
       </>
     );
   } catch (error) {
