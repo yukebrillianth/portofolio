@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 
+import { LampDemo } from '@/components/ui/lamp';
+// import Image from 'next/image';
 import { breadCrumbJsonLd, pageJsonLd } from '@/lib/seo';
-import { PageService, PortfolioService } from '@/services';
+import { PageService } from '@/services';
 
 export async function generateMetadata(): Promise<Metadata> {
   const metadata = await PageService.getSinglePage('/');
@@ -29,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Home() {
   try {
-    const data = await PortfolioService.getPortfolios();
+    // const data = await PortfolioService.getPortfolios();
     const socials = await PageService.getSiteSocials();
     const jsonLd = pageJsonLd(
       '',
@@ -48,7 +49,7 @@ export default async function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadCrumb) }}
         />
         <main>
-          <h1>Posts</h1>
+          {/* <h1>Posts</h1>
           {data.portfolios.map((portfolio) => (
             <div key={portfolio.id}>
               <p>{portfolio.title}</p>
@@ -60,7 +61,8 @@ export default async function Home() {
                 className='rounded-lg'
               />
             </div>
-          ))}
+          ))} */}
+          <LampDemo />
         </main>
       </>
     );
