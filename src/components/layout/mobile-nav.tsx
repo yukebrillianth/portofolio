@@ -47,12 +47,11 @@ export default function MobileNav() {
               >
                 <path d='M278.6 256l68.2-68.2c6.2-6.2 6.2-16.4 0-22.6-6.2-6.2-16.4-6.2-22.6 0L256 233.4l-68.2-68.2c-6.2-6.2-16.4-6.2-22.6 0-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3l68.2 68.2-68.2 68.2c-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3 6.2 6.2 16.4 6.2 22.6 0l68.2-68.2 68.2 68.2c6.2 6.2 16.4 6.2 22.6 0 6.2-6.2 6.2-16.4 0-22.6L278.6 256z'></path>
               </svg>
-
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
-                className='fixed inset-0 top-16 z-50 flex flex-col items-start justify-start space-y-10 bg-white bg-white/10 pt-3 text-xl text-zinc-600 backdrop-blur-lg transition duration-200 hover:text-zinc-800 dark:bg-black dark:bg-black/50'
+                className='fixed inset-0 top-[62px] z-50 flex h-screen flex-col items-start justify-start space-y-10 bg-white bg-white/10 pt-3 text-xl text-zinc-600 backdrop-blur-lg transition duration-200 hover:text-zinc-800 dark:bg-black/80'
               >
                 <div className='flex flex-col items-start justify-start gap-[20px] px-5'>
                   {navMenu.map((menu) => (
