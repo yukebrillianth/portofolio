@@ -120,35 +120,60 @@ const features = [
     titleColor: 'dark',
     descriptionColor: 'dark',
     background: (
+      // <ShineBorder
+      //   className='bg-background relative flex h-[350px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl'
+      //   color={['#A07CFE', '#FE8FB5', '#FFBE7B']}
+      // >
       <>
         <Meteors number={30} />
-        <Marquee
-          pauseOnHover
-          className='absolute top-10 [--duration:20s] [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)]'
-        >
-          {files.map((f, idx) => (
-            <figure
-              key={idx}
-              className={cn(
-                'relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4',
-                'border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]',
-                'dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]',
-                'transform-gpu blur-[0.5px] transition-all duration-300 ease-out hover:blur-none',
-              )}
-            >
-              <Image
-                src={f.image}
-                width={500}
-                height={500}
-                className='max-h-[20%] rounded object-cover'
-                alt={f.name}
-              />
-              <blockquote className='mb-16 mt-2 text-xs'>
-                {f.description}
-              </blockquote>
-            </figure>
-          ))}
-        </Marquee>
+        <div className='flex flex-col gap-2'>
+          <Marquee pauseOnHover className='[--duration:20s]'>
+            {files.map((f, idx) => (
+              <figure
+                key={idx}
+                className={cn(
+                  'h-32 w-32 cursor-pointer overflow-hidden rounded-xl border p-4',
+                  'border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]',
+                  'dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]',
+                  'transform-gpu blur-[0.5px] transition-all duration-300 ease-out hover:blur-none',
+                )}
+              >
+                <Image
+                  src={f.image}
+                  width={500}
+                  height={500}
+                  className='h-full rounded object-cover'
+                  alt={f.name}
+                />
+              </figure>
+            ))}
+          </Marquee>
+          <Marquee
+            pauseOnHover
+            className='[--duration:40s] [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]'
+          >
+            {files.map((f, idx) => (
+              <figure
+                key={idx}
+                className={cn(
+                  'h-32 w-32 cursor-pointer overflow-hidden rounded-xl border p-4',
+                  'border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]',
+                  'dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]',
+                  'transform-gpu blur-[0.5px] transition-all duration-300 ease-out hover:blur-none',
+                )}
+              >
+                <Image
+                  src={f.image}
+                  width={500}
+                  height={500}
+                  className='h-full rounded object-cover'
+                  alt={f.name}
+                />
+              </figure>
+            ))}
+          </Marquee>
+        </div>
+        {/* </ShineBorder> */}
       </>
     ),
   },

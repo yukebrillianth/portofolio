@@ -62,15 +62,16 @@ export default function Hero() {
             MAGE9 App Dev Champ &apos;23. Let’s build the future!
           </h2>
           <div className='relative mb-4 flex w-full flex-col justify-center space-y-2 sm:flex-row sm:justify-start sm:space-x-4 sm:space-y-0'>
-            <a
+            <Link
+              target='_blank'
               className='group relative flex h-14 w-full cursor-pointer items-center justify-center space-x-2 rounded-2xl bg-slate-900 p-px px-4 py-2 text-center text-sm font-semibold text-white no-underline shadow-zinc-900 transition duration-200 hover:shadow-2xl dark:bg-white dark:text-black sm:w-52'
-              href='/components'
+              href='https://go.yukebrillianth.my.id/cv'
             >
-              Check it Out
-            </a>
+              Download CV
+            </Link>
             <a
               className='flex h-14 w-full items-center justify-center rounded-2xl border border-transparent bg-white text-sm text-black shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 hover:shadow-lg dark:border-neutral-600 dark:bg-black dark:text-white sm:w-52'
-              href='/pricing'
+              href='/blog'
             >
               Read My Blog
             </a>

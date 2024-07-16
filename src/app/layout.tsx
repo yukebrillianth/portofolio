@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang='en'>
       <body
         className={cn(
-          'overflow-x-hidden scroll-smooth bg-white font-sans antialiased dark:bg-black',
+          'overflow-x-hidden scroll-smooth bg-white font-sans text-foreground antialiased dark:bg-black',
           inter.className,
         )}
       >
