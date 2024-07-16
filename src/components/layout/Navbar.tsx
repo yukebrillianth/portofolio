@@ -9,7 +9,7 @@ import MainNav from './main-nav';
 import MobileNav from './mobile-nav';
 
 export default function Navbar() {
-  const scrolled = useScroll(30);
+  const scrolled = useScroll(20);
   return (
     <motion.header
       initial={{
