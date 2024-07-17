@@ -10,6 +10,10 @@ export const navMenu: Array<NavMenuItem> = [
     href: '/projects',
   },
   {
+    title: 'Achievements',
+    href: '/achievements',
+  },
+  {
     title: 'Blog',
     href: '/blog',
     badge: {
